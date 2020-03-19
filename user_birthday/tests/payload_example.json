@@ -1,0 +1,27 @@
+[
+  {
+    "first_name": "Tomás",
+    "last_name": "Hayes",
+    "email": "tomas@hayes.com.ar",
+    "birthday": "11.01.1988"
+  },
+  {
+    "first_name": "Eike",
+    "last_name": "Bartel",
+    "email": "bartels@baumeister-rosing.de",
+    "birthday": "01.03.1989"
+  },
+  {
+    "first_name": "Hans",
+    "last_name": "Peter",
+    "email": "hanspeter@baumeister-rosing.de",
+    "birthday": "30.03.1989"
+  },
+  {
+    "first_name": "Jam",
+    "last_name": "Lumbeck",
+    "email": "lumbeck@baumeister-rosing.de",
+    "birthday": "02.01.1988"
+  }
+  
+]
