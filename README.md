@@ -83,13 +83,16 @@ request, even if some items in the request are correct.
 This is, of course, a design desition.
 
 #### Examples
-* Adding/modifying a user:
-`curl  http://localhost:8000/api/v1/users/ -i -d '[{"first_name": "Alan", "last_name": "Brito", "email": "alan@brito.de", "birthday": "19.04.1988"}]`
+* Upserting a user:
+```
+curl  http://localhost:8000/api/v1/users/ -i -d '[{"first_name": "Alan", "last_name": "Brito", "email": "alan@brito.de", "birthday": "19.04.1988"}]'
+```
 
-* Buld adding the 1000 users from test mock data:
-`curl  http://localhost:8000/api/v1/users/ -i -d @user_birthday/tests/MOCK_DATA.json`
+* Bulk upserting 1000 users from test data mock:
+```
+curl  http://localhost:8000/api/v1/users/ -i -d @user_birthday/tests/MOCK_DATA.json
+```
 
-  
 
 #### 1b. 
 GET to `/api/v1/users/?from=%d%m&to=%d%m`
@@ -105,10 +108,14 @@ the parsing. So at the end both formats coexists.
 
 #### Examples
 * Adding/modifying a user:
-`curl  http://localhost:8000/api/v1/users/  -i -d '[{"first_name": "Alan", "last_name": "Brito", "email": "alan@brito.de", "birthday": "19.04.1988"}]`
+```
+curl  http://localhost:8000/api/v1/users/  -i -d '[{"first_name": "Alan", "last_name": "Brito", "email": "alan@brito.de", "birthday": "19.04.1988"}]'
+```
 
 * Buld adding the 1000 users from test mock data:
-`curl  http://localhost:8000/api/v1/users/  -i -d @user_birthday/tests/MOCK_DATA.json`
+```
+curl  http://localhost:8000/api/v1/users/  -i -d @user_birthday/tests/MOCK_DATA.json
+```
 
 #### 1c. 
 GET to `/api/v1/users/avg_age`
@@ -126,6 +133,12 @@ To trigger the invalidations of the cache against user's model changes, I used
 Django's signals.
 To calculate the average age of users, I used a ModelManager, so it can be
 accesssed by simply calling `User.objects.get_avg_age()`
+
+#### Example
+
+```
+curl  http://localhost:8000/api/v1/users/avg_age
+```
 
 ++Side note:++
 
