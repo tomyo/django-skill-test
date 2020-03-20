@@ -72,7 +72,7 @@ By default, since email address is unique, trying to add a User with a existing 
 will yield an error in the request. Since updating a user's info is a normal task, 
 two alternatives are posible:
 
-1. Add a UPDATE call to the API, to handle this case.
+1. Add a PUT/PATH call to the API, to handle this case.
 
 2. Upsert.
 
