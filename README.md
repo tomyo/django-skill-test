@@ -1,4 +1,4 @@
-# Rosenmeister skill-test
+# skill-test
 
 ## Getting started
 ###  Set up enviroment:
