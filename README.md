@@ -1,4 +1,4 @@
-# skill-test
+# Django skill-test
 
 ## Getting started
 ###  Set up enviroment:
